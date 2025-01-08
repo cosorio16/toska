@@ -1,5 +1,7 @@
 <div class="w-full h-screen py-20">
-  <div class="grid grid-cols-2 grid-rows-2 w-full h-full gap-2 gridcontainer transition-all">
+  <div
+    class="grid grid-cols-2 grid-rows-2 w-full h-full gap-2 gridcontainer"
+  >
     <img
       src="/images/discount.jpeg"
       alt=""
@@ -13,7 +15,7 @@
     <img
       src="/images/kensei.jpeg"
       alt=""
-      class="h-full w-full rounded-xl object-cover"
+      class="h-full w-full rounded-xl object-cover grayscale"
     />
   </div>
 </div>
@@ -21,13 +23,18 @@
 <style>
   img {
     cursor: pointer;
+    transition: all 0.323s ease;
+  }
+
+  .gridcontainer {
+    transition: all 0.323s ease;
   }
 
   .gridcontainer:hover img {
-    filter: blur(5px);
+    filter: blur(5px) grayscale(100%);
   }
 
   .gridcontainer:hover img:hover {
-    filter: blur(0);
+    filter: blur(0) grayscale(0);
   }
 </style>

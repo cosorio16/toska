@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+
 const { title } = Astro.props;
 ---
 
@@ -14,6 +16,7 @@ const { title } = Astro.props;
   </head>
   <body>
     <slot />
+    <Footer />
   </body>
 </html>
 
@@ -26,6 +29,11 @@ const { title } = Astro.props;
     padding: 0;
     box-sizing: border-box;
     scrollbar-width: none;
+  }
+
+  *::selection {
+    background: #1d1d1d;
+    color: rgb(108, 68, 252);
   }
 
   html,
