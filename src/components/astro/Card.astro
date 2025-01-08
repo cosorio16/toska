@@ -1,4 +1,5 @@
 ---
+import Bag from "../../icons/Bag.astro";
 import Heart from "../../icons/Heart.astro";
 import Line from "../../icons/Line.astro";
 
@@ -18,17 +19,24 @@ const { image, title } = Astro.props;
   >
   </div>
   <div class="flex flex-col text-white gap-2">
-    <p data-aos="fade-left" class="text-3xl text-pretty font-medium">{title}</p>
+    <p
+      data-aos="fade-left"
+      data-aos-offset="0"
+      class="text-3xl text-pretty font-medium"
+    >
+      {title}
+    </p>
     <div class="flex items-center justify-between">
       <button
         data-aos="fade-left"
         data-aos-delay="200"
+        data-aos-offset="0"
         class="w-fit px-6 py-1 rounded-full bg-white text-[#1b1b1b] font-medium text-lg flex items-center gap-5"
-        >Shop Now <span> <Line sizes="20"/> </span></button
+        >Shop Now <span> <Line sizes="20" /> </span></button
       >
 
       <button>
-        <Heart sizes="30"/>
+        <Heart sizes="30" />
       </button>
     </div>
   </div>

@@ -3,7 +3,9 @@ import Cart from "../../icons/Cart.astro";
 import User from "../../icons/User.astro";
 ---
 
-<header class="flex items-center px-40 py-2 justify-between min-h-16 border-b">
+<header
+  class="flex items-center px-40 py-2 justify-between min-h-16 border-b bg-black text-white"
+>
   <nav class="flex items-center gap-10 min-w-fit grow">
     <a href="#">
       <img
@@ -33,22 +35,26 @@ import User from "../../icons/User.astro";
     position: relative;
   }
 
+  li:hover a {
+    color: #55a4ff;
+  }
+
   li::after {
     position: absolute;
     width: 100%;
     content: " ";
     height: 1px;
     border-radius: 18px;
-    background-color: rgb(37, 0, 71);
+    background-color: #55a4ff;
     opacity: 0;
-    top: calc(100% + 12px);
+    top: calc(100% + 20px);
     left: 0;
     transform: translateY(-10px);
-    transition: all 0.444s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.323s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
 
   li:hover::after {
-    height: 10px;
+    height: 5px;
     opacity: 1;
     transform: translateY(0px);
   }
