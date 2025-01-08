@@ -5,6 +5,7 @@ import Hero from "../components/astro/Hero.astro";
 import Card from "../components/astro/Card.astro";
 import Banner from "../components/astro/Banner.astro";
 import Grid from "../components/astro/Grid.astro";
+import Verified from "../icons/Verified.astro";
 ---
 
 <Layout title="Toska - Inicio">
@@ -12,14 +13,11 @@ import Grid from "../components/astro/Grid.astro";
   <main class="flex flex-col gap-5 px-40">
     <Hero />
     <section class="flex flex-col gap-10 py-10">
-      <h1 data-aos="fade-down" class="flex items-center gap-5 text-3xl">
+      <h1 data-aos="fade-down" class="flex items-center gap-2 text-3xl">
         <span class="w-16 bg-zinc-500 h-0.5"></span>
-        Collection
+        Collection <span> <Verified sizes="30"/> </span>
       </h1>
       <div class="grid grid-cols-3 gap-20 items-center justify-items-center">
-        <Card image="/images/addiktion.jpg" title="addiKtion Tshirt" />
-        <Card image="/images/caktus.jpeg" title="caKtus Tshirt" />
-        <Card image="/images/sKater.jpg" title="sKater Tshirt" />
         <Card image="/images/addiktion.jpg" title="addiKtion Tshirt" />
         <Card image="/images/caktus.jpeg" title="caKtus Tshirt" />
         <Card image="/images/sKater.jpg" title="sKater Tshirt" />

@@ -1,3 +1,7 @@
+---
+import Line from "../../icons/Line.astro";
+---
+
 <section
   data-aos="fade-up"
   class="max-w-screen max-h-screen flex items-center overflow-hidden py-10"
@@ -30,9 +34,11 @@
         data-aos="zoom-in"
         data-aos-offset="0"
         data-aos-delay="500"
-        class="bg-zinc-900 text-xl h-fit px-8 py-2 rounded-full text-white"
-        >Explore</button
-      >
+        style="cursor: pointer; transition: all 0.323s ease;"
+        class="bg-zinc-900 text-xl h-fit px-8 py-2 rounded-full text-white flex items-center gap-5 w-48 justify-center hover:gap-8 transition-all"
+        >Explore
+        <Line sizes="20" />
+      </button>
     </div>
   </div>
 </section>

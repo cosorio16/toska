@@ -1,5 +1,10 @@
+---
+import Cart from "../../icons/Cart.astro";
+import User from "../../icons/User.astro";
+---
+
 <header class="flex items-center px-40 py-2 justify-between min-h-16 border-b">
-  <nav class="flex items-center gap-10">
+  <nav class="flex items-center gap-10 min-w-fit grow">
     <a href="#">
       <img
         src="/images/logo.png"
@@ -7,21 +12,44 @@
         class="w-14 rounded-full aspect-square"
       /></a
     >
-    <ul class="flex items-center gap-5 text-xl">
-      <li><a href="#" class="flex gap-2 items-center">Shop</a></li>
-      <li><a href="#">Más Vendidos</a></li>
-      <li><a href="#">Lo nuevo</a></li>
+    <ul class="flex items-center gap-8 text-xl">
+      <li class="min-w-24 px-4 text-center"><a href="#">Shop</a></li>
+      <li class="min-w-24 px-4 text-center"><a href="#">Más Vendidos</a></li>
+      <li class="min-w-24 px-4 text-center"><a href="#">Lo nuevo</a></li>
     </ul>
   </nav>
-  <nav class="flex items-center gap-4">
-    <button class="w-10 rounded-full aspect-square bg-black text-white"
-      >1</button
-    >
-    <button class="w-10 rounded-full aspect-square bg-black text-white"
-      >1</button
-    >
-    <button class="w-10 rounded-full aspect-square bg-black text-white"
-      >1</button
-    >
+  <nav class="flex items-center gap-8">
+    <button>
+      <Cart sizes="30" />
+    </button>
+    <button>
+      <User sizes="30" />
+    </button>
   </nav>
 </header>
+
+<style>
+  li {
+    position: relative;
+  }
+
+  li::after {
+    position: absolute;
+    width: 100%;
+    content: " ";
+    height: 1px;
+    border-radius: 18px;
+    background-color: rgb(37, 0, 71);
+    opacity: 0;
+    top: calc(100% + 12px);
+    left: 0;
+    transform: translateY(-10px);
+    transition: all 0.444s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+
+  li:hover::after {
+    height: 10px;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+</style>

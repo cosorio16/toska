@@ -1,10 +1,18 @@
+---
+import Cookie from "../../icons/Cookie.astro";
+import Verified from "../../icons/Verified.astro";
+import World from "../../icons/World.astro";
+---
+
 <footer
   class="w-full min-h-96 bg-zinc-900 text-white px-20 py-10 text-2xl grid grid-cols-2"
 >
   <div class="flex justify-between flex-col gap-4">
-    <h1 class="grow text-4xl">TOSKA</h1>
+    <h1 class="grow text-4xl flex items-center gap-2">
+      TOSKA <span class="pb-1"><Verified sizes="25" /></span>
+    </h1>
     <p class="text-5xl w-96">
-      BEST PRICES, AFFORDABLE PRICES, SAFE IN YOUR HANDS
+      BEST PRICES, AFFORDABLE PRICES, SAFE IN YOUR HANDS.
     </p>
     <p class="text-sm">&copy; 2025 Toska. All Rights Reserved.</p>
   </div>
@@ -37,8 +45,12 @@
     </div>
     <nav class="self-end flex items-center gap-10">
       <button>Legal</button>
-      <button>Cookie Settings</button>
-      <button>English</button>
+      <button class="flex items-center gap-2">
+        <Cookie sizes="30" /> Cookie Settings
+      </button>
+      <button class="flex items-center gap-2">
+        <World sizes="30" /> English
+      </button>
     </nav>
   </div>
 </footer>
