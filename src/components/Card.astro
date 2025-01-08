@@ -1,0 +1,14 @@
+---
+const { image } = Astro.props;
+---
+
+<div
+  class="w-full rounded-2xl aspect-square bg-no-repeat shadow"
+  style={{
+    backgroundImage: `url(${image})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+  }}
+>
+</div>
