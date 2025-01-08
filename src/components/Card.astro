@@ -1,14 +1,22 @@
 ---
-const { image } = Astro.props;
+const { image, title } = Astro.props;
 ---
 
 <div
-  class="w-full rounded-2xl aspect-square bg-no-repeat shadow"
-  style={{
-    backgroundImage: `url(${image})`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-  }}
+  class="w-full aspect-[1/1.1] border shadow-md bg-[#1b1b1b] flex flex-col gap-4 px-7 py-10 rounded-lg"
 >
+  <div
+    class="bg-no-repeat w-full h-full bg-center bg-contain border border-opacity-10 border-white"
+    style={{
+      backgroundImage: `url(${image})`,
+    }}
+  >
+  </div>
+  <div class="flex flex-col text-white gap-2">
+    <p class="text-3xl text-pretty font-medium">{title}</p>
+    <button
+      class="w-fit px-6 py-1 rounded-full bg-white text-[#1b1b1b] font-medium text-lg"
+      >Shop Now</button
+    >
+  </div>
 </div>
